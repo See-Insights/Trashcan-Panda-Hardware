@@ -27,7 +27,7 @@
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="4" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
@@ -35,7 +35,7 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
@@ -47,7 +47,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -870,16 +870,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 &lt;br&gt;
 You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
 <packages>
-<package name="CREATIVE_COMMONS" urn="urn:adsk.eagle:footprint:37005/1" library_version="1">
-<description>&lt;h3&gt;Creative Commons License Template&lt;/h3&gt;
-&lt;p&gt;CC BY-SA 4.0 License with &lt;a href="https://creativecommons.org/licenses/by-sa/4.0/"&gt;link to license&lt;/a&gt; and placeholder for designer name.&lt;/p&gt;
-&lt;p&gt;Devices using:
-&lt;ul&gt;&lt;li&gt;FRAME_LEDGER&lt;/li&gt;
-&lt;li&gt;FRAME_LETTER&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
-<text x="-20.32" y="5.08" size="1.778" layer="51" font="vector">Released under the Creative Commons Attribution Share-Alike 4.0 License</text>
-<text x="0" y="2.54" size="1.778" layer="51" font="vector"> https://creativecommons.org/licenses/by-sa/4.0/</text>
-<text x="11.43" y="0" size="1.778" layer="51" font="vector">Designed by:</text>
-</package>
 <package name="FIDUCIAL-MICRO" urn="urn:adsk.eagle:footprint:36998/1" library_version="1">
 <description>&lt;h3&gt;Fiducial - Circle, 0.25in&lt;/h3&gt;
 &lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
@@ -889,16 +879,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 <packages3d>
-<package3d name="CREATIVE_COMMONS" urn="urn:adsk.eagle:package:37121/1" type="box" library_version="1">
-<description>Creative Commons License Template
-CC BY-SA 4.0 License with link to license and placeholder for designer name.
-Devices using:
-FRAME_LEDGER
-FRAME_LETTER</description>
-<packageinstances>
-<packageinstance name="CREATIVE_COMMONS"/>
-</packageinstances>
-</package3d>
 <package3d name="FIDUCIAL-MICRO" urn="urn:adsk.eagle:package:37111/1" type="box" library_version="1">
 <description>Fiducial - Circle, 0.25in
 Point-of-reference for pick-and-place machines and other optical instruments.
@@ -1307,12 +1287,6 @@ Please make sure your boards conform to these design rules.</description>
 <element name="U$2" library="SparkFun-Aesthetics" package="OSHW-LOGO-M" value="" x="86.1568" y="11.557" smashed="yes" rot="MR90">
 <attribute name="POPULATE" value="0" x="86.1568" y="11.557" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
-<element name="FRAME1" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" package="CREATIVE_COMMONS" package3d_urn="urn:adsk.eagle:package:37121/1" value="FRAME-LETTER" x="0.0254" y="-11.811" smashed="yes">
-<attribute name="POPULATE" value="0" x="0.0254" y="-11.811" size="1.778" layer="27" display="off"/>
-</element>
-<element name="FRAME2" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" package="CREATIVE_COMMONS" package3d_urn="urn:adsk.eagle:package:37121/1" value="FRAME-LETTER" x="-0.0254" y="-7.9756" smashed="yes">
-<attribute name="POPULATE" value="0" x="-0.0254" y="-7.9756" size="1.778" layer="27" display="off"/>
-</element>
 <element name="R7" library="Custom Components" package="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10k" x="64.008" y="9.906" smashed="yes">
 <attribute name="HOUSEPART" value="YES" x="64.008" y="9.906" size="1.778" layer="27" display="off"/>
 <attribute name="MPN" value="MF-RES-0805-10K" x="64.008" y="9.906" size="1.778" layer="27" display="off"/>
@@ -1388,9 +1362,6 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="POPULATE" value="1" x="79.756" y="18.796" size="1.778" layer="27" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-CAP-0805-0.1uF" x="79.756" y="18.796" size="1.778" layer="27" display="off"/>
 <attribute name="VALUE" value="0.1uF" x="79.756" y="18.796" size="1.778" layer="27" display="off"/>
-</element>
-<element name="FRAME3" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" package="CREATIVE_COMMONS" package3d_urn="urn:adsk.eagle:package:37121/1" value="FRAME-LETTER" x="90.424" y="19.2786" smashed="yes">
-<attribute name="POPULATE" value="0" x="90.424" y="19.2786" size="1.778" layer="27" display="off"/>
 </element>
 <element name="JP7" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" package="SMT-JUMPER_2_NO_SILK" package3d_urn="urn:adsk.eagle:package:39279/1" value="JUMPER-SMT_2_NO_SILK" x="73.66" y="21.082" smashed="yes" rot="MR270">
 <attribute name="NAME" x="73.533" y="18.796" size="0.8128" layer="26" font="vector" rot="MR0" align="bottom-center"/>
@@ -1587,16 +1558,16 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="U1" pad="5"/>
 <contactref element="C2" pad="2"/>
 <polygon width="0.254" layer="1" rank="2">
-<vertex x="-3.7846" y="42.6873875"/>
-<vertex x="99.752840625" y="42.882784375"/>
-<vertex x="99.692475" y="-4.021"/>
-<vertex x="-3.7846" y="-4.2164"/>
+<vertex x="-0.4826" y="39.147684375"/>
+<vertex x="90.092003125" y="39.31861875"/>
+<vertex x="90.040453125" y="-0.735309375"/>
+<vertex x="-0.4826" y="-0.906246875"/>
 </polygon>
 <polygon width="0.254" layer="16">
-<vertex x="-3.595303125" y="47.033259375"/>
-<vertex x="95.4937375" y="46.87546875"/>
-<vertex x="95.27434375" y="-3.176103125"/>
-<vertex x="-3.376025" y="-3.149821875"/>
+<vertex x="-0.54838125" y="39.40598125"/>
+<vertex x="90.115228125" y="39.26160625"/>
+<vertex x="89.939234375" y="-0.888884375"/>
+<vertex x="-0.372415625" y="-0.864825"/>
 </polygon>
 <contactref element="V1" pad="1"/>
 <contactref element="V3" pad="1"/>
