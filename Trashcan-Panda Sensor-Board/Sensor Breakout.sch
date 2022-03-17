@@ -5509,15 +5509,15 @@ LIS3DH Accelerometer Breakout</text>
 <attribute name="NAME" x="175.26" y="122.428" size="1.778" layer="95"/>
 <attribute name="VALUE" x="175.26" y="99.06" size="1.778" layer="96"/>
 </instance>
-<instance part="U1" gate="G$1" x="88.9" y="43.18" smashed="yes">
-<attribute name="NAME" x="73.6364" y="56.4085" size="1.27196875" layer="95"/>
-<attribute name="VALUE" x="73.6323" y="27.9123" size="1.272309375" layer="96"/>
+<instance part="U1" gate="G$1" x="55.88" y="43.18" smashed="yes">
+<attribute name="NAME" x="40.6164" y="56.4085" size="1.27196875" layer="95"/>
+<attribute name="VALUE" x="40.6123" y="27.9123" size="1.272309375" layer="96"/>
 </instance>
-<instance part="SUPPLY1" gate="G$1" x="119.38" y="66.04" smashed="yes">
-<attribute name="VALUE" x="119.38" y="68.834" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY1" gate="G$1" x="93.98" y="66.04" smashed="yes">
+<attribute name="VALUE" x="93.98" y="68.834" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="GND1" gate="1" x="119.38" y="17.78" smashed="yes">
-<attribute name="VALUE" x="116.84" y="15.24" size="1.778" layer="96"/>
+<instance part="GND1" gate="1" x="86.36" y="17.78" smashed="yes">
+<attribute name="VALUE" x="83.82" y="15.24" size="1.778" layer="96"/>
 </instance>
 <instance part="SUPPLY2" gate="G$1" x="58.42" y="139.7" smashed="yes">
 <attribute name="VALUE" x="58.42" y="142.494" size="1.778" layer="96" align="bottom-center"/>
@@ -5532,12 +5532,12 @@ LIS3DH Accelerometer Breakout</text>
 <attribute name="MPN" x="167.64" y="81.28" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
 <instance part="Q1" gate="G$1" x="177.8" y="71.12" smashed="yes">
-<attribute name="VALUE" x="170.46" y="77.12" size="1.5" layer="96" ratio="0" rot="MR180"/>
+<attribute name="VALUE" x="183.16" y="79.66" size="1.5" layer="96" ratio="0" rot="MR180"/>
 <attribute name="NAME" x="171.06" y="66.72" size="1.5" layer="95" ratio="0" rot="MR180"/>
 </instance>
-<instance part="C2" gate="G$1" x="119.38" y="43.18" smashed="yes">
-<attribute name="NAME" x="120.904" y="46.101" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="120.904" y="41.021" size="1.778" layer="96" font="vector"/>
+<instance part="C2" gate="G$1" x="93.98" y="50.8" smashed="yes">
+<attribute name="NAME" x="95.504" y="53.721" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="95.504" y="48.641" size="1.778" layer="96" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -5572,19 +5572,23 @@ LIS3DH Accelerometer Breakout</text>
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="U1" gate="G$1" pin="GND"/>
-<wire x1="119.38" y1="35.56" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="33.02" x2="119.38" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="35.56" x2="119.38" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="35.56" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="33.02" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="35.56" x2="86.36" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="119.38" y1="40.64" x2="119.38" y2="38.1" width="0.1524" layer="91"/>
-<junction x="119.38" y="35.56"/>
+<junction x="86.36" y="35.56"/>
 <pinref part="U1" gate="G$1" pin="RES"/>
-<wire x1="119.38" y1="38.1" x2="119.38" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="38.1" x2="119.38" y2="38.1" width="0.1524" layer="91"/>
-<junction x="119.38" y="38.1"/>
+<wire x1="86.36" y1="38.1" x2="86.36" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="38.1" x2="86.36" y2="38.1" width="0.1524" layer="91"/>
+<junction x="86.36" y="38.1"/>
 <pinref part="U1" gate="G$1" pin="GND1"/>
-<wire x1="106.68" y1="33.02" x2="119.38" y2="33.02" width="0.1524" layer="91"/>
-<junction x="119.38" y="33.02"/>
+<wire x1="73.66" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
+<junction x="86.36" y="33.02"/>
+<pinref part="U1" gate="G$1" pin="SDO/SA0"/>
+<wire x1="73.66" y1="45.72" x2="86.36" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="45.72" x2="86.36" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="38.1" x2="93.98" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="38.1" x2="93.98" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -5600,8 +5604,8 @@ LIS3DH Accelerometer Breakout</text>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="SCL/SPC"/>
-<wire x1="71.12" y1="53.34" x2="55.88" y2="53.34" width="0.1524" layer="91"/>
-<label x="58.42" y="53.34" size="1.778" layer="95"/>
+<wire x1="38.1" y1="53.34" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
+<label x="25.4" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SDA" class="0">
@@ -5617,8 +5621,8 @@ LIS3DH Accelerometer Breakout</text>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="SDA/SDI/SDO"/>
-<wire x1="71.12" y1="50.8" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
-<label x="58.42" y="50.8" size="1.778" layer="95"/>
+<wire x1="38.1" y1="50.8" x2="22.86" y2="50.8" width="0.1524" layer="91"/>
+<label x="25.4" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!SHUT" class="0">
@@ -5636,17 +5640,18 @@ LIS3DH Accelerometer Breakout</text>
 <segment>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="106.68" y1="53.34" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="53.34" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="60.96" x2="119.38" y2="66.04" width="0.1524" layer="91"/>
-<junction x="119.38" y="53.34"/>
+<wire x1="73.66" y1="53.34" x2="86.36" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="53.34" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="119.38" y1="48.26" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="CS"/>
-<wire x1="71.12" y1="48.26" x2="48.26" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="48.26" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="48.26" y1="60.96" x2="119.38" y2="60.96" width="0.1524" layer="91"/>
-<junction x="119.38" y="60.96"/>
+<wire x1="38.1" y1="48.26" x2="15.24" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="48.26" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="60.96" x2="86.36" y2="60.96" width="0.1524" layer="91"/>
+<junction x="86.36" y="60.96"/>
+<wire x1="86.36" y1="60.96" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="60.96" x2="93.98" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="66.04" x2="93.98" y2="60.96" width="0.1524" layer="91"/>
+<junction x="93.98" y="60.96"/>
 </segment>
 <segment>
 <pinref part="U2" gate="U1" pin="VCC"/>
@@ -5678,8 +5683,8 @@ LIS3DH Accelerometer Breakout</text>
 <net name="INT" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="INT1"/>
-<wire x1="71.12" y1="45.72" x2="55.88" y2="45.72" width="0.1524" layer="91"/>
-<label x="58.42" y="45.72" size="1.778" layer="95"/>
+<wire x1="38.1" y1="45.72" x2="22.86" y2="45.72" width="0.1524" layer="91"/>
+<label x="25.4" y="45.72" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="5"/>
@@ -5704,8 +5709,8 @@ LIS3DH Accelerometer Breakout</text>
 </segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="VDD_IO"/>
-<wire x1="106.68" y1="50.8" x2="137.16" y2="50.8" width="0.1524" layer="91"/>
-<label x="127" y="50.8" size="1.778" layer="95"/>
+<wire x1="73.66" y1="50.8" x2="83.82" y2="50.8" width="0.1524" layer="91"/>
+<label x="76.2" y="50.8" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="!EN" class="0">
