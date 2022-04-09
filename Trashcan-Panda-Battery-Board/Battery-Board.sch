@@ -264,6 +264,26 @@ Tadiran</description>
 <text x="-11.43" y="1.27" size="1.27" layer="21">+</text>
 <text x="11.176" y="-0.508" size="1.27" layer="21">-</text>
 </package>
+<package name="PTC-RUSBF120">
+<wire x1="-3.556" y1="-1.524" x2="3.556" y2="-1.524" width="0.127" layer="51"/>
+<wire x1="3.556" y1="1.524" x2="-3.556" y2="1.524" width="0.127" layer="51"/>
+<wire x1="3.556" y1="1.524" x2="3.556" y2="-1.55" width="0.127" layer="21"/>
+<wire x1="-3.556" y1="1.524" x2="3.556" y2="1.524" width="0.127" layer="39"/>
+<wire x1="3.556" y1="1.524" x2="3.556" y2="-1.524" width="0.127" layer="39"/>
+<wire x1="3.556" y1="-1.524" x2="-3.556" y2="-1.524" width="0.127" layer="39"/>
+<wire x1="-3.556" y1="-1.524" x2="-3.556" y2="1.524" width="0.127" layer="39"/>
+<wire x1="-3.556" y1="1.55" x2="-3.556" y2="-1.524" width="0.127" layer="21"/>
+<text x="-6.62531875" y="2.2418" size="1.27101875" layer="25">&gt;NAME</text>
+<text x="-6.5864" y="-3.44335" size="1.271240625" layer="27">&gt;VALUE</text>
+<wire x1="-3.556" y1="1.524" x2="-3.556" y2="-1.524" width="0.127" layer="51"/>
+<wire x1="3.556" y1="1.524" x2="3.556" y2="-1.524" width="0.127" layer="51"/>
+<wire x1="-3.556" y1="1.55" x2="-3.49" y2="1.55" width="0.127" layer="21"/>
+<wire x1="-1.59" y1="1.524" x2="3.556" y2="1.524" width="0.127" layer="21"/>
+<wire x1="3.46" y1="-1.55" x2="3.556" y2="-1.55" width="0.127" layer="21"/>
+<wire x1="-3.556" y1="-1.524" x2="1.71" y2="-1.524" width="0.127" layer="21"/>
+<pad name="1" x="-2.54" y="0.7" drill="1.06"/>
+<pad name="2" x="2.54" y="-0.7" drill="1.06"/>
+</package>
 </packages>
 <symbols>
 <symbol name="1V5">
@@ -281,6 +301,19 @@ Tadiran</description>
 <text x="-1.90733125" y="0.635778125" size="1.525859375" layer="94">-</text>
 <pin name="-" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
 <pin name="+" x="7.62" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+<symbol name="PTC">
+<wire x1="0.889" y1="-2.54" x2="0.889" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-0.889" y1="2.54" x2="-0.889" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0.889" y1="2.54" x2="-0.889" y2="2.54" width="0.254" layer="94"/>
+<wire x1="0.889" y1="-2.54" x2="-0.889" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.524" y1="1.524" x2="-1.778" y2="-1.778" width="0.1524" layer="94"/>
+<wire x1="-1.778" y1="-1.778" x2="-1.778" y2="-2.54" width="0.1524" layer="94"/>
+<text x="2.0574" y="-2.794" size="1.778" layer="95">&gt;NAME</text>
+<text x="2.032" y="-5.207" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="2" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="1" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+<wire x1="1.524" y1="2.286" x2="1.524" y2="1.524" width="0.1524" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -324,6 +357,25 @@ KEYSTONE &lt;a href="https://pricing.snapeda.com/parts/2226/Adafruit%20Industrie
 <technology name="">
 <attribute name="MFG" value="Tadiran" constant="no"/>
 <attribute name="MPN" value="HLC-1520A/TP" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RUSBF120">
+<gates>
+<gate name="G$1" symbol="PTC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="PTC-RUSBF120">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="RUSBF120" constant="no"/>
+<attribute name="WEB" value="https://www.littelfuse.com/~/media/electronics/product_specifications/resettable_ptcs/littelfuse_ptc_rusbf120_product_specification.pdf.pdf" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -589,9 +641,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <parts>
 <part name="B1" library="Battery-Board" deviceset="2232" device="" override_package3d_urn="urn:adsk.eagle:package:34202687/3" override_package_urn="urn:adsk.eagle:footprint:34202688/1" override_locally_modified="yes"/>
 <part name="J1" library="Custom Components" deviceset="B2B-PH-SM4-TB(LF)(SN)" device=""/>
-<part name="U$1" library="Battery-Board" deviceset="HLC-1520A/TP" device=""/>
+<part name="B2" library="Battery-Board" deviceset="HLC-1520A/TP" device=""/>
 <part name="FRAME1" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="FRAME-LETTER" device="" package3d_urn="urn:adsk.eagle:package:37121/1"/>
 <part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="PTC" library="Battery-Board" deviceset="RUSBF120" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -606,22 +659,22 @@ Warning - HLC cell cannot be over discharged.  Battery
 pack must be disconnected before changing D-Cell</text>
 <text x="170.18" y="7.62" size="2.54" layer="94">Chip McClelland
 chip@seeinsights.com</text>
-<text x="236.22" y="7.62" size="2.54" layer="94">V1.2</text>
+<text x="236.22" y="7.62" size="2.54" layer="94">V1.3</text>
 <text x="17.78" y="25.4" size="2.1844" layer="94">Change Log
 V1.1  - Flipped the test point and labeled, Labeled D-Cell Polarity, Reduced Board Size,
 Removed Test points, Tightened up spacing
 v1.2 - Changed Board dimension ratio</text>
 </plain>
 <instances>
-<instance part="B1" gate="G$1" x="116.84" y="129.54" smashed="yes" rot="R90">
-<attribute name="NAME" x="113.661490625" y="128.2686" size="1.77996875" layer="95" rot="R90"/>
-<attribute name="VALUE" x="121.9233" y="128.26916875" size="1.779159375" layer="96" rot="R90"/>
+<instance part="B1" gate="G$1" x="124.46" y="129.54" smashed="yes" rot="R90">
+<attribute name="NAME" x="121.281490625" y="128.2686" size="1.77996875" layer="95" rot="R90"/>
+<attribute name="VALUE" x="129.5433" y="128.26916875" size="1.779159375" layer="96" rot="R90"/>
 </instance>
-<instance part="J1" gate="G$1" x="137.16" y="132.08" smashed="yes">
-<attribute name="NAME" x="134.61638125" y="135.132340625" size="1.271809375" layer="95"/>
-<attribute name="VALUE" x="134.61901875" y="124.457059375" size="1.270490625" layer="96"/>
+<instance part="J1" gate="G$1" x="157.48" y="132.08" smashed="yes">
+<attribute name="NAME" x="154.93638125" y="135.132340625" size="1.271809375" layer="95"/>
+<attribute name="VALUE" x="154.93901875" y="124.457059375" size="1.270490625" layer="96"/>
 </instance>
-<instance part="U$1" gate="G$1" x="104.14" y="129.54" smashed="yes" rot="R90">
+<instance part="B2" gate="G$1" x="104.14" y="129.54" smashed="yes" rot="R90">
 <attribute name="NAME" x="100.961490625" y="128.2686" size="1.77996875" layer="95" rot="R90"/>
 <attribute name="VALUE" x="109.2233" y="123.18916875" size="1.779159375" layer="96" rot="R90"/>
 </instance>
@@ -634,6 +687,10 @@ v1.2 - Changed Board dimension ratio</text>
 <instance part="GND1" gate="1" x="104.14" y="114.3" smashed="yes">
 <attribute name="VALUE" x="104.14" y="114.046" size="1.778" layer="96" align="top-center"/>
 </instance>
+<instance part="PTC" gate="G$1" x="142.24" y="142.24" smashed="yes" rot="R270">
+<attribute name="NAME" x="139.446" y="140.1826" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="137.033" y="140.208" size="1.778" layer="96" rot="R270"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -641,14 +698,14 @@ v1.2 - Changed Board dimension ratio</text>
 <net name="GND" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="104.14" y1="121.92" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="121.92" x2="132.08" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="121.92" x2="132.08" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="-"/>
+<wire x1="104.14" y1="121.92" x2="124.46" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="121.92" x2="152.4" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="121.92" x2="152.4" y2="129.54" width="0.1524" layer="91"/>
+<pinref part="B2" gate="G$1" pin="-"/>
 <wire x1="104.14" y1="124.46" x2="104.14" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="B1" gate="G$1" pin="-"/>
-<wire x1="116.84" y1="124.46" x2="116.84" y2="121.92" width="0.1524" layer="91"/>
-<junction x="116.84" y="121.92"/>
+<wire x1="124.46" y1="124.46" x2="124.46" y2="121.92" width="0.1524" layer="91"/>
+<junction x="124.46" y="121.92"/>
 <label x="121.92" y="119.38" size="1.778" layer="95"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="104.14" y1="121.92" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
@@ -657,16 +714,24 @@ v1.2 - Changed Board dimension ratio</text>
 </net>
 <net name="VCC" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="104.14" y1="142.24" x2="116.84" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="142.24" x2="132.08" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="132.08" y1="142.24" x2="132.08" y2="132.08" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="+"/>
+<wire x1="104.14" y1="142.24" x2="124.46" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="142.24" x2="137.16" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="B2" gate="G$1" pin="+"/>
 <wire x1="104.14" y1="137.16" x2="104.14" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="B1" gate="G$1" pin="+"/>
-<wire x1="116.84" y1="137.16" x2="116.84" y2="142.24" width="0.1524" layer="91"/>
-<junction x="116.84" y="142.24"/>
+<wire x1="124.46" y1="137.16" x2="124.46" y2="142.24" width="0.1524" layer="91"/>
+<junction x="124.46" y="142.24"/>
 <label x="121.92" y="144.78" size="1.778" layer="95"/>
+<pinref part="PTC" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="V-OUT" class="0">
+<segment>
+<pinref part="PTC" gate="G$1" pin="2"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<wire x1="147.32" y1="142.24" x2="152.4" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="142.24" x2="152.4" y2="132.08" width="0.1524" layer="91"/>
+<label x="149.86" y="144.78" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>

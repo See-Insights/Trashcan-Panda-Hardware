@@ -174,31 +174,12 @@
 <libraries>
 <library name="SparkFun">
 <packages>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
-<circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="MICRO-FIDUCIAL">
-<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
-</package>
 </packages>
 <symbols>
 <symbol name="GND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-</symbol>
-<symbol name="FIDUCIAL">
-<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -209,35 +190,6 @@
 </gates>
 <devices>
 <device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="FIDUCIAL" prefix="JP">
-<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
-Various fiducial points for machine vision alignment.</description>
-<gates>
-<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
-</gates>
-<devices>
-<device name="1.5X3" package="FIDUCIAL-1.5X3">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2" package="FIDUCIAL-1X2">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="1X2.5" package="FIDUCIAL-1X2.5">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -5033,12 +4985,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </class>
 </classes>
 <parts>
-<part name="JP2" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL">
-<attribute name="POPULATE" value="0"/>
-</part>
-<part name="JP6" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL">
-<attribute name="POPULATE" value="0"/>
-</part>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="">
 <attribute name="POPULATE" value="0"/>
 </part>
@@ -5047,12 +4993,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </part>
 <part name="U2" library="SparkFun-Sensors" deviceset="VL53L1X" device="SMD" override_package3d_urn="urn:adsk.eagle:package:33496316/2" override_package_urn="urn:adsk.eagle:footprint:33496317/1" value="VL53L1CXV0FY/1"/>
 <part name="R2" library="Custom Components" deviceset="RESISTOR-MF-10K-" device="0805" package3d_urn="urn:adsk.eagle:package:39651/1" value="10k"/>
-<part name="JP1" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL">
-<attribute name="POPULATE" value="0"/>
-</part>
-<part name="JP5" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL">
-<attribute name="POPULATE" value="0"/>
-</part>
 <part name="GND2" library="SparkFun" deviceset="GND" device=""/>
 <part name="J1" library="Custom Components" deviceset="BM06B-SRSS-TBT(LF)(SN)" device=""/>
 <part name="U1" library="Custom Components" deviceset="LIS3DH" device="" value="LIS3DHTR"/>
@@ -5071,7 +5011,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheet>
 <plain>
 <text x="170.434" y="11.43" size="2.54" layer="94" font="vector">Chip McClelland</text>
-<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v1.1</text>
+<text x="237.744" y="7.366" size="2.54" layer="94" font="vector">v1.1a</text>
 <text x="71.12" y="86.36" size="1.778" layer="97" font="vector">7-bit unshifted I2C address: 0x29</text>
 <text x="149.86" y="38.1" size="1.778" layer="97">VCC: 2.3V-3.5V</text>
 <text x="43.18" y="165.1" size="5.08" layer="94">VL53L1X Time of Flight Sensor  and 
@@ -5079,12 +5019,6 @@ LIS3DH Accelerometer Breakout</text>
 <text x="22.86" y="20.32" size="1.778" layer="97" font="vector">7-bit unshifted I2C address: 0x19</text>
 </plain>
 <instances>
-<instance part="JP2" gate="G$1" x="233.68" y="30.48" smashed="yes">
-<attribute name="POPULATE" x="233.68" y="30.48" size="1.778" layer="96" display="off"/>
-</instance>
-<instance part="JP6" gate="G$1" x="236.22" y="30.48" smashed="yes">
-<attribute name="POPULATE" x="236.22" y="30.48" size="1.778" layer="96" display="off"/>
-</instance>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
 <attribute name="POPULATE" x="0" y="0" size="1.778" layer="96" display="off"/>
 </instance>
@@ -5103,12 +5037,6 @@ LIS3DH Accelerometer Breakout</text>
 <instance part="R2" gate="G$1" x="106.68" y="116.84" smashed="yes" rot="R90">
 <attribute name="NAME" x="105.156" y="116.84" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="108.204" y="116.84" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
-</instance>
-<instance part="JP1" gate="G$1" x="236.22" y="27.94" smashed="yes">
-<attribute name="POPULATE" x="236.22" y="27.94" size="1.778" layer="96" display="off"/>
-</instance>
-<instance part="JP5" gate="G$1" x="233.68" y="27.94" smashed="yes">
-<attribute name="POPULATE" x="233.68" y="27.94" size="1.778" layer="96" display="off"/>
 </instance>
 <instance part="GND2" gate="1" x="58.42" y="83.82" smashed="yes">
 <attribute name="VALUE" x="55.88" y="81.28" size="1.778" layer="96"/>

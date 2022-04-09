@@ -9,17 +9,17 @@
 </settings>
 <grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -33,9 +33,9 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
@@ -45,7 +45,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="no" active="no"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="no" active="no"/>
@@ -186,13 +186,6 @@ chip@seeinsights.com
 <wire x1="22.86" y1="0" x2="0" y2="0" width="0.1524" layer="20"/>
 </plain>
 <libraries>
-<library name="SparkFun">
-<packages>
-<package name="MICRO-FIDUCIAL">
-<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
-</package>
-</packages>
-</library>
 <library name="SparkFun-Aesthetics">
 <description>&lt;h3&gt;SparkFun Aesthetics&lt;/h3&gt;
 This library contiains non-functional items such as logos, build/ordering notes, frame blocks, etc. 
@@ -672,40 +665,29 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <class number="1" name="power" width="0.2032" drill="0">
 </class>
 </classes>
-<designrules name="SparkFun-2-layer-FAB-LIMIT">
-<description language="en">&lt;b&gt;SparkFun 2 Layer Design Rule Checks - STANDARD/TIGHT/FAB-LIMIT&lt;/b&gt;
-&lt;p&gt;
-These rules have been curated by SparkFuns DFM commitee. After doing much research, communicating with our multiple fab houses, and getting quotes of various designs, we have compiled three DRU files. 
-&lt;p&gt;
-&lt;b&gt;STANDARD:&lt;/b&gt; This is more of a &quot;best case scenario&quot; set of limitations. If your design has the space, and/or you have the time to work within these parameters, please do. Larger trace width and clearance makes for easier visual inspection of the PCB while troubleshooting (useful in production and to the end user). It also allows for better ability to hack a trace (if you are crazy enough to scrape away the mask and solder to a trace). Another thing to keep in mind is that more metal is just more robust. 
-&lt;p&gt;
-&lt;b&gt;TIGHT:&lt;/b&gt; This is where cost comes into play. We have found that most fab houses begin to add extra charges when you go smaller than these specs. In some cases, going to less than 15 mil trace can increase the cost by 10%. (This is why we have set the min drill on this DRU to 15 mil) Same story for traces thinner than 7 mil. To avoid those extra charges, then stay within the rules of this DRU.
-&lt;p&gt;
-&lt;b&gt;FAB-LIMIT:&lt;/b&gt; These set of rules are at the very limit of most fab houses capabilities. You will pay more for these specs, and it should be used on designs that have a darned good reason to need 4 mil vias and 4 mil traces.
-&lt;p&gt;
-**NOTE Clearance, Distance, Sizes, and Restring are all set to different limits in each of these three DRU files. Please compare the files within the CAM job editor window of eagle to see all the numbers.
-&lt;p&gt;
-***NOTE, Please set your Net Classes to default (0mil for all settings), so that it won't effect the DRC when you run it with these settings.</description>
+<designrules name="MF_Standard_2_Layer">
+<description language="en">&lt;b&gt;MacroFab, INC. EAGLE Design Rules&lt;/b&gt;
+&lt;p&gt;This DRC check is for 2-Layer Standard Capability boards to be manufactured through the MacroFab, INC. service.</description>
 <param name="layerSetup" value="(1*16)"/>
-<param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
-<param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
-<param name="mdWireWire" value="4mil"/>
-<param name="mdWirePad" value="4mil"/>
-<param name="mdWireVia" value="4mil"/>
-<param name="mdPadPad" value="4mil"/>
-<param name="mdPadVia" value="4mil"/>
-<param name="mdViaVia" value="4mil"/>
-<param name="mdSmdPad" value="4mil"/>
-<param name="mdSmdVia" value="4mil"/>
-<param name="mdSmdSmd" value="4mil"/>
+<param name="mtCopper" value="0.035mm 0.0175mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.0175mm 0.035mm"/>
+<param name="mtIsolate" value="1.5mm 1.1mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
+<param name="mdWireWire" value="5mil"/>
+<param name="mdWirePad" value="5mil"/>
+<param name="mdWireVia" value="5mil"/>
+<param name="mdPadPad" value="5mil"/>
+<param name="mdPadVia" value="5mil"/>
+<param name="mdViaVia" value="5mil"/>
+<param name="mdSmdPad" value="0mil"/>
+<param name="mdSmdVia" value="0mil"/>
+<param name="mdSmdSmd" value="0mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="4mil"/>
-<param name="mdDrill" value="4mil"/>
+<param name="mdCopperDimension" value="10mil"/>
+<param name="mdDrill" value="10mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="4mil"/>
-<param name="msDrill" value="6mil"/>
-<param name="msMicroVia" value="9.99mm"/>
+<param name="msWidth" value="5mil"/>
+<param name="msDrill" value="10mil"/>
+<param name="msMicroVia" value="10mil"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
 <param name="rvPadInner" value="0.25"/>
@@ -714,15 +696,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="5mil"/>
+<param name="rlMinPadTop" value="4mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
-<param name="rlMinPadInner" value="6mil"/>
+<param name="rlMinPadInner" value="4mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="5mil"/>
+<param name="rlMinPadBottom" value="4mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="5mil"/>
+<param name="rlMinViaOuter" value="4mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="6mil"/>
+<param name="rlMinViaInner" value="4mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -730,13 +712,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="rlMaxMicroViaInner" value="20mil"/>
 <param name="psTop" value="-1"/>
 <param name="psBottom" value="-1"/>
-<param name="psFirst" value="-1"/>
+<param name="psFirst" value="0"/>
 <param name="psElongationLong" value="100"/>
 <param name="psElongationOffset" value="100"/>
 <param name="mvStopFrame" value="1"/>
 <param name="mvCreamFrame" value="0"/>
-<param name="mlMinStopFrame" value="4mil"/>
-<param name="mlMaxStopFrame" value="4mil"/>
+<param name="mlMinStopFrame" value="2mil"/>
+<param name="mlMaxStopFrame" value="2mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
 <param name="mlViaStopLimit" value="25mil"/>
@@ -747,9 +729,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkAngle" value="1"/>
+<param name="checkAngle" value="0"/>
 <param name="checkFont" value="1"/>
-<param name="checkRestrict" value="1"/>
+<param name="checkRestrict" value="0"/>
 <param name="checkStop" value="0"/>
 <param name="checkValues" value="0"/>
 <param name="checkNames" value="1"/>
@@ -855,12 +837,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </pass>
 </autorouter>
 <elements>
-<element name="JP2" library="SparkFun" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="21.971" y="0.889" smashed="yes">
-<attribute name="POPULATE" value="0" x="21.971" y="0.889" size="1.778" layer="27" display="off"/>
-</element>
-<element name="JP6" library="SparkFun" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="0.762" y="11.938" smashed="yes">
-<attribute name="POPULATE" value="0" x="0.762" y="11.938" size="1.778" layer="27" display="off"/>
-</element>
 <element name="FRAME1" library="SparkFun-Aesthetics" package="CREATIVE_COMMONS" value="FRAME-LETTER" x="-15.24" y="-8.89" smashed="yes">
 <attribute name="POPULATE" value="0" x="-15.24" y="-8.89" size="1.778" layer="27" display="off"/>
 </element>
@@ -878,12 +854,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="POPULATE" value="1" x="11.303" y="2.54" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="URL" value="https://factory.macrofab.com/part/MF-RES-0805-10K" x="11.303" y="2.54" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="VALUE" x="11.303" y="3.302" size="0.6096" layer="28" font="vector" ratio="20" rot="MR180" align="top-center"/>
-</element>
-<element name="JP1" library="SparkFun" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="0.762" y="11.938" smashed="yes" rot="MR0">
-<attribute name="POPULATE" value="0" x="0.762" y="11.938" size="1.778" layer="28" rot="MR0" display="off"/>
-</element>
-<element name="JP5" library="SparkFun" package="MICRO-FIDUCIAL" value="FIDUCIALUFIDUCIAL" x="21.971" y="0.889" smashed="yes" rot="MR0">
-<attribute name="POPULATE" value="0" x="21.971" y="0.889" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 <element name="J1" library="Custom Components" package="JST_BM06B-SRSS-TB(LF)(SN)" value="BM06B-SRSS-TBT(LF)(SN)" x="2.921" y="6.35" smashed="yes" rot="MR270">
 <attribute name="MPN" value="BM06B-SRSS-TBT(LF)(SN)" x="2.921" y="6.35" size="1.778" layer="28" rot="MR270" display="off"/>
@@ -979,7 +949,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <vertex x="-1.27" y="-1.27"/>
 </polygon>
 <via x="21.59" y="4.318" extent="1-16" drill="0.35"/>
-<via x="9.144" y="8.382" extent="1-16" drill="0.35"/>
+<via x="8.89" y="8.636" extent="1-16" drill="0.35"/>
 <contactref element="U1" pad="10"/>
 <wire x1="19.812" y1="4.318" x2="19.55" y2="4.58" width="0.3048" layer="16"/>
 <wire x1="19.55" y1="5.125" x2="19.55" y2="4.58" width="0.3048" layer="16"/>
@@ -998,26 +968,26 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="J1" pad="4"/>
 <contactref element="U1" pad="4"/>
 <wire x1="12.23" y1="7.35" x2="12.23" y2="9.36" width="0.3048" layer="1"/>
-<wire x1="12.23" y1="9.36" x2="10.795" y2="10.795" width="0.3048" layer="1"/>
-<wire x1="4.445" y1="10.795" x2="2.54" y2="8.89" width="0.3048" layer="1"/>
+<wire x1="12.23" y1="9.36" x2="10.668" y2="10.922" width="0.3048" layer="1"/>
+<wire x1="4.572" y1="10.922" x2="2.54" y2="8.89" width="0.3048" layer="1"/>
 <wire x1="2.54" y1="8.89" x2="2.54" y2="6.35" width="0.3048" layer="1"/>
 <via x="2.54" y="6.35" extent="1-16" drill="0.35"/>
 <wire x1="2.54" y1="6.35" x2="3.04" y2="5.85" width="0.3048" layer="16"/>
 <wire x1="3.04" y1="5.85" x2="5.446" y2="5.85" width="0.3048" layer="16"/>
-<wire x1="10.795" y1="10.795" x2="10.16" y2="10.795" width="0.3048" layer="1"/>
-<wire x1="10.16" y1="10.795" x2="4.445" y2="10.795" width="0.3048" layer="1"/>
+<wire x1="10.668" y1="10.922" x2="10.16" y2="10.922" width="0.3048" layer="1"/>
+<wire x1="10.16" y1="10.922" x2="4.572" y2="10.922" width="0.3048" layer="1"/>
 <wire x1="19.55" y1="7.575" x2="19.55" y2="10.0282125" width="0.3048" layer="16"/>
-<wire x1="19.55" y1="10.0282125" x2="18.7832125" y2="10.795" width="0.3048" layer="16"/>
-<wire x1="18.7832125" y1="10.795" x2="10.16" y2="10.795" width="0.3048" layer="16"/>
-<via x="10.16" y="10.795" extent="1-16" drill="0.35"/>
+<wire x1="19.55" y1="10.0282125" x2="18.6562125" y2="10.922" width="0.3048" layer="16"/>
+<wire x1="18.6562125" y1="10.922" x2="10.16" y2="10.922" width="0.3048" layer="16"/>
+<via x="10.16" y="10.922" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="SDA">
 <contactref element="U2" pad="9"/>
 <contactref element="J1" pad="3"/>
 <contactref element="U1" pad="6"/>
-<wire x1="11.43" y1="7.35" x2="11.388" y2="7.392" width="0.3048" layer="1"/>
-<wire x1="11.388" y1="7.392" x2="11.388" y2="9.186" width="0.3048" layer="1"/>
-<wire x1="11.388" y1="9.186" x2="10.414" y2="10.16" width="0.3048" layer="1"/>
+<wire x1="11.43" y1="7.35" x2="11.43" y2="7.392" width="0.3048" layer="1"/>
+<wire x1="11.43" y1="7.392" x2="11.43" y2="9.186" width="0.3048" layer="1"/>
+<wire x1="11.43" y1="9.186" x2="10.414" y2="10.16" width="0.3048" layer="1"/>
 <wire x1="5.08" y1="10.16" x2="3.81" y2="8.89" width="0.3048" layer="1"/>
 <wire x1="3.81" y1="8.89" x2="3.81" y2="7.62" width="0.3048" layer="1"/>
 <via x="3.81" y="7.62" extent="1-16" drill="0.35"/>
@@ -1027,10 +997,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="7.62" y1="10.16" x2="5.08" y2="10.16" width="0.3048" layer="1"/>
 <wire x1="20.275" y1="6.85" x2="20.82" y2="6.85" width="0.3048" layer="16"/>
 <wire x1="20.82" y1="6.85" x2="21.209" y2="7.239" width="0.3048" layer="16"/>
-<wire x1="21.209" y1="7.239" x2="21.209" y2="9.271" width="0.3048" layer="16"/>
-<wire x1="19.05" y1="11.43" x2="8.89" y2="11.43" width="0.3048" layer="16"/>
-<wire x1="21.209" y1="9.271" x2="19.05" y2="11.43" width="0.3048" layer="16"/>
-<wire x1="8.89" y1="11.43" x2="7.62" y2="10.16" width="0.3048" layer="16"/>
+<wire x1="21.209" y1="7.239" x2="21.209" y2="9.779" width="0.3048" layer="16"/>
+<wire x1="19.304" y1="11.684" x2="9.144" y2="11.684" width="0.3048" layer="16"/>
+<wire x1="21.209" y1="9.779" x2="19.304" y2="11.684" width="0.3048" layer="16"/>
+<wire x1="9.144" y1="11.684" x2="7.62" y2="10.16" width="0.3048" layer="16"/>
 <via x="7.62" y="10.16" extent="1-16" drill="0.35"/>
 </signal>
 <signal name="!SHUT">
@@ -1054,16 +1024,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="15.113" y1="7.8" x2="13.9965" y2="8.9165" width="0.3048" layer="16"/>
 <wire x1="15.113" y1="7.8" x2="17.063" y2="5.85" width="0.3048" layer="16"/>
 <wire x1="17.063" y1="5.85" x2="17.825" y2="5.85" width="0.3048" layer="16"/>
-<wire x1="13.03" y1="7.35" x2="13.03" y2="7.95" width="0.3048" layer="1"/>
-<wire x1="13.03" y1="7.95" x2="13.97" y2="8.89" width="0.3048" layer="1"/>
 <via x="13.97" y="8.89" extent="1-16" drill="0.35"/>
 <wire x1="13.97" y1="8.89" x2="13.9965" y2="8.9165" width="0.3048" layer="16"/>
-<wire x1="13.97" y1="8.89" x2="15.24" y2="7.62" width="0.3048" layer="1"/>
 <contactref element="U1" pad="8"/>
 <wire x1="17.825" y1="5.85" x2="20.275" y2="5.85" width="0.3048" layer="16"/>
-<wire x1="13.03" y1="5.35" x2="14.513" y2="5.35" width="0.3048" layer="1"/>
-<wire x1="15.24" y1="6.077" x2="14.513" y2="5.35" width="0.3048" layer="1"/>
-<wire x1="15.24" y1="7.62" x2="15.24" y2="6.077" width="0.3048" layer="1"/>
 <contactref element="C2" pad="P$1"/>
 <contactref element="C3" pad="P$1"/>
 <wire x1="17.063" y1="4.085" x2="18.1" y2="3.048" width="0.3048" layer="16"/>
@@ -1072,6 +1036,17 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="12.507" y1="8.89" x2="13.97" y2="8.89" width="0.3048" layer="16"/>
 <wire x1="12.5222" y1="6.35" x2="12.5222" y2="2.8592" width="0.3048" layer="16"/>
 <wire x1="12.5222" y1="2.8592" x2="12.203" y2="2.54" width="0.3048" layer="16"/>
+<wire x1="14.605" y1="3.937" x2="15.24" y2="4.572" width="0.3048" layer="1"/>
+<wire x1="14.605" y1="3.937" x2="13.589" y2="3.937" width="0.3048" layer="1"/>
+<wire x1="13.589" y1="3.937" x2="13.03" y2="4.496" width="0.3048" layer="1"/>
+<wire x1="15.24" y1="8.128" x2="14.478" y2="8.89" width="0.3048" layer="1"/>
+<wire x1="14.478" y1="8.89" x2="13.97" y2="8.89" width="0.3048" layer="1"/>
+<wire x1="15.24" y1="4.572" x2="15.24" y2="8.128" width="0.3048" layer="1"/>
+<wire x1="13.97" y1="8.89" x2="13.462" y2="8.89" width="0.3048" layer="1"/>
+<wire x1="13.03" y1="8.458" x2="13.03" y2="7.35" width="0.3048" layer="1"/>
+<wire x1="13.462" y1="8.89" x2="13.03" y2="8.458" width="0.3048" layer="1"/>
+<wire x1="13.03" y1="5.2706" x2="13.03" y2="4.496" width="0.3048" layer="1"/>
+<wire x1="13.03" y1="5.2706" x2="13.03" y2="5.35" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="INT">
 <contactref element="U1" pad="11"/>
@@ -1117,8 +1092,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
 </mfgpreviewcolors>
 <errors>
-<approved hash="19,1,fff874cd55b47790"/>
-<approved hash="5,1,53548a1a730fac0d"/>
+<approved hash="21,19,bd5fbf5dbf5dbd5f"/>
+<approved hash="19,1,4d33d6d225ca6cca"/>
 </errors>
 </board>
 </drawing>
